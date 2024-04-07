@@ -1,0 +1,216 @@
+﻿@inherits LayoutComponentBase
+@namespace Interprobet.Layout
+
+
+<div class="relative z-40 sticky top-0 ">
+    <div class="absolute w-full lg:h-20 md:h-16 h-14 bg-gradient-to-b from-[#5b2b98] to-[#291350] shadow-[0px_1px_25px_4px_rgba(0,0,0,0.75)]"></div>
+    <div class="flex absolute w-full -mt-1">
+        <div class="lg:w-6/12 w-7/12 lg:block flex">
+            <div class="relative pl-4 w-full">
+                <img class="absolute lg:w-[300px] w-full mt-4 z-10" src="/images/logo3.png">
+                <img id="flashit" class="w-[320px] -mt-12 -ml-10 absolute z-0" src="/images/ln01-300x147.png">
+            </div>
+            <div class="lg:hidden block mt-5 ml-6  ">
+                <button @onclick="LoggleMenu" class="hover:text-[#e88107]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="lg:w-5/12 flex justify-end hidden lg:flex">
+            <ul class="flex space-x-3">
+                <li @onclick="()=>NavigateTo(PromotionPage)" class="bg-white cursor-pointer p-0.5 h-[100px] w-[75px] rounded-b-lg bg-gradient-to-b from-[#a06ce1] to-[#19171b] hover:from-[#7a3abf] hover:to-[#fabc0e]">
+                    <div class="flex-col flex h-full items-center justify-center bg-gradient-to-b bg-yellow-600 from-[#363636] to-[#141414] hover:from-[#532294] hover:to-[#361962] tranfroms transition duration-300 ease-in-out rounded-b-lg">
+                        <img class="w-12 h-12" src="/images/download-1.png" />
+                        <div class="font-light text-xs">โปรโมชั่น</div>
+                    </div>
+                </li>
+
+                <li class="bg-white cursor-pointer p-0.5 h-[100px] w-[75px] rounded-b-lg bg-gradient-to-b from-[#a06ce1] to-[#19171b] hover:from-[#7a3abf] hover:to-[#fabc0e]">
+                    <div class="flex-col flex h-full items-center justify-center bg-gradient-to-b bg-yellow-600 from-[#363636] to-[#141414] hover:from-[#532294] hover:to-[#361962] tranfroms transition duration-300 ease-in-out rounded-b-lg">
+                        <img class="w-12 h-12" src="/images/menu-hot-ic.png" />
+                        <div class="font-light text-xs">บทความ</div>
+                    </div>
+                </li>
+
+                <li class="bg-white cursor-pointer p-0.5 h-[100px] w-[75px] rounded-b-lg bg-gradient-to-b from-[#a06ce1] to-[#19171b] hover:from-[#7a3abf] hover:to-[#fabc0e]">
+                    <div class="flex-col flex h-full items-center justify-center bg-gradient-to-b bg-yellow-600 from-[#363636] to-[#141414] hover:from-[#532294] hover:to-[#361962] tranfroms transition duration-300 ease-in-out rounded-b-lg">
+                        <img class="w-12 h-12" src="/images/calender02.png" />
+                        <div class="font-light text-xs">กิจกรรม</div>
+                    </div>
+                </li>
+
+                <li @onclick="()=>NavigateTo(LinePage)" class="bg-white cursor-pointer p-0.5 h-[100px] w-[75px] rounded-b-lg bg-gradient-to-b from-[#a06ce1] to-[#19171b] hover:from-[#7a3abf] hover:to-[#fabc0e]">
+                    <div class="flex-col flex h-full items-center justify-center bg-gradient-to-b bg-yellow-600 from-[#363636] to-[#141414] hover:from-[#532294] hover:to-[#361962] tranfroms transition duration-300 ease-in-out rounded-b-lg">
+                        <img class="w-12 h-12" src="/images/line.png" />
+                        <div class="font-light text-xs">Line</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="flex lg:w-3/12 h-14  w-5/12 lg:h-20 lg:justify-center justify-end items-center lg:space-x-5 space-x-2 lg:pt-2 pt-3 pr-5 lg:pr-0">
+            <button class="bg-gradient-to-br from-[#ffe6b9] lg:h-[40px] h-[30px] via-[#a6761e] to-[#ffe6b9] rounded-lg p-0.5 hover:from-[#e88107] hover:to-[#e88107]">
+                <div class="bg-gradient-to-b from-[#353535] to-[#171717] w-full h-full rounded-lg flex justify-center items-center px-3 lg:text-sm text-[10px] text-[#f4f1d2] hover:shadow-lg">เข้าสู่ระบบ</div>
+            </button>
+            <button class="bg-gradient-to-br from-[#ffe6b9] lg:h-[40px] h-[30px] via-[#a6761e] to-[#ffe6b9] rounded-lg p-0.5 hover:from-[#e88107] hover:to-[#e88107]">
+                <div class="bg-gradient-to-b from-[#353535] to-[#171717] w-full h-full rounded-lg flex justify-center items-center px-3 lg:text-sm text-[10px] text-[#f4f1d2] hover:shadow-lg">สมัครสมาชิก</div>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+@* lg screen *@
+<div class="hidden w-[200px] lg:flex items-start w-full h-full bg-[url('/images/rm380-03-scaled.jpg')] bg-cover bg-no-repeat bg-center bg-fixed z-10">
+    <div class="w-[200px] lg:flex hidden sticky top-0 z-0">
+        <div class="w-[200px] bg-[#0a0a0a] bg-opacity-40 h-screen pt-[100px]">
+            <MenuLink Route="/" Text="ยอดนิยม" IconPath="/images/ic-nav-menu-hot-game.png" />
+            <MenuLink Route="/slotgame" Text="สล็อตเกมส์" IconPath="/images/slotgame.png" />
+            <MenuLink Route="/casino" Text="คาสิโนสด" IconPath="/images/EZ-Casino-คาสิโนออนไลน์-บาคาร่าสด-รูเล็ต-ซิคโบ-ไฮโล-เสือ-มังกร.png" />
+            <MenuLink Route="/sport" Text="กีฬา" IconPath="/images/sportmenuicon.png" />
+            <MenuLink Route="/lotto" Text="หวย" IconPath="/images/04-1.png" />
+            <MenuLink Route="/trial" Text="ทอดลองเล่น" IconPath="/images/ic-nav-menu-e-sport.png" />
+            <button class="px-6 mt-4" ><img class="w-full" src="/images/linetext.png"></button>
+        </div>
+        <div class="w-[2px] h-screen bg-gradient-to-b from-[#441f76] via-[#c29af4] to-[#1a0960]">
+        </div>
+    </div>
+
+    <div class="flex-1">
+        <div class="flex mt-20 bg-[#22164e] w-full p-1 shadow-[0px_1px_25px_4px_rgba(0,0,0,0.75)]">
+            <div class="w-7 flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-white">
+                    <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z"></path>
+                    <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z"></path>
+                </svg>
+            </div>
+            <div id="scroll-container" class="w-full grow"><div id="scroll-text">INTERPROBET คาสิโนออนไลน์ สล็อตออนไลน์ ที่ให้คุณสนุกได้ทุกรูปแบบ</div></div>
+        </div>
+        <div class="w-full mt-4">
+            <HeaderSwiper />
+            <div>
+                @Body
+            </div>
+            <Footer />
+        </div>
+    </div>
+
+</div>
+
+@* md to sm scrren *@
+<div class="lg:hidden md:flex flex flex-wrap items-start w-full h-full bg-[url('/images/rm380-03-scaled.jpg')] bg-cover bg-no-repeat bg-center bg-fixed z-10">
+    <div class="flex mt-14 bg-[#22164e] w-full p-1 shadow-[0px_1px_25px_4px_rgba(0,0,0,0.75)]">
+        <div class="w-7 flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-white">
+                <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z"></path>
+                <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z"></path>
+            </svg>
+        </div>
+        <div id="scroll-container" class="w-full grow"><div id="scroll-text" class="text-xs">INTERPROBET คาสิโนออนไลน์ สล็อตออนไลน์ ที่ให้คุณสนุกได้ทุกรูปแบบ</div></div>
+    </div>
+    <div class="w-full lg:hidden mt-4">
+        <HeaderSwiper />
+    </div>
+
+    @* Mobile *@
+    <div class="w-2/12 lg:hidden pt-12 md:flex flex sticky top-0 z-20">
+        <div class="p-1 m-2 h-[500px] rounded-3xl bg-opacity-30 h-screen pt-[100px]">
+            <div class="flex justify-center">
+                <MenuLink Route="/" Text="ยอดนิยม" IconPath="/images/ic-nav-menu-hot-game.png" />
+            </div>
+            <div class="flex justify-center">
+                <MenuLink Route="/slotgame" Text="สล็อตเกมส์" IconPath="/images/slotgame.png" />
+            </div>
+            <div class="flex justify-center">
+                <MenuLink Route="/casino" Text="คาสิโนสด" IconPath="/images/EZ-Casino-คาสิโนออนไลน์-บาคาร่าสด-รูเล็ต-ซิคโบ-ไฮโล-เสือ-มังกร.png" />
+            </div>
+            <div class="flex justify-center">
+                <MenuLink Route="/sport" Text="กีฬา" IconPath="/images/sportmenuicon.png" />
+            </div>
+            <div class="flex justify-center">
+                <MenuLink Route="/lotto" Text="หวย" IconPath="/images/04-1.png" />
+            </div>
+            <div class="flex justify-center">
+                <MenuLink Route="/trial" Text="ทอดลองเล่น" IconPath="/images/ic-nav-menu-e-sport.png" />
+            </div>
+        </div>
+    </div>
+    <div class="w-10/12">
+        <div class="w-full mt-20 pl-10">
+            <div>
+                @Body
+            </div>
+        </div>
+    </div>
+    <Footer />
+</div>
+
+
+
+
+
+@* Sidbar Dialog *@
+<div class="relative @DialogCss(isMenuShow)" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <!--
+      Background backdrop, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0"
+        To: "opacity-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+    <div class="@SetBackgroundToZ0(isMenuShow) fixed inset-0 bg-gray-900 bg-opacity-95 transition-opacity"></div>
+
+    <div class="fixed inset-0 w-screen overflow-y-auto">
+        <div class="flex  min-h-full items-start justify-center p-4 text-center sm:items-center sm:p-0 @DialogBackground(isMenuShow)">
+
+            <div class="relative transform overflow-hidden rounded-lg px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
+                <button @onclick="LoggleMenu" class="absolute top-0 right-0 bg-white rounded-full text-gray-900 hover:text-yellow-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <div>
+                    <div class="flex">
+                        <ul class="flex space-x-3">
+                            <li class="bg-white cursor-pointer p-0.5 h-[100px] w-[75px] rounded-lg bg-gradient-to-b from-[#a06ce1] to-[#19171b] hover:from-[#7a3abf] hover:to-[#fabc0e]">
+                                <div class="flex-col flex h-full items-center justify-center bg-gradient-to-b bg-yellow-600 from-[#363636] to-[#141414] hover:from-[#532294] hover:to-[#361962] tranfroms transition duration-300 ease-in-out rounded-lg">
+                                    <img class="w-12 h-12" src="/images/download-1.png" />
+                                    <div class="font-light text-xs">โปรโมชั่น</div>
+                                </div>
+                            </li>
+
+                            <li class="bg-white cursor-pointer p-0.5 h-[100px] w-[75px] rounded-lg bg-gradient-to-b from-[#a06ce1] to-[#19171b] hover:from-[#7a3abf] hover:to-[#fabc0e]">
+                                <div class="flex-col flex h-full items-center justify-center bg-gradient-to-b bg-yellow-600 from-[#363636] to-[#141414] hover:from-[#532294] hover:to-[#361962] tranfroms transition duration-300 ease-in-out rounded-lg">
+                                    <img class="w-12 h-12" src="/images/menu-hot-ic.png" />
+                                    <div class="font-light text-xs">บทความ</div>
+                                </div>
+                            </li>
+
+                            <li class="bg-white cursor-pointer p-0.5 h-[100px] w-[75px] rounded-lg bg-gradient-to-b from-[#a06ce1] to-[#19171b] hover:from-[#7a3abf] hover:to-[#fabc0e]">
+                                <div class="flex-col flex h-full items-center justify-center bg-gradient-to-b bg-yellow-600 from-[#363636] to-[#141414] hover:from-[#532294] hover:to-[#361962] tranfroms transition duration-300 ease-in-out rounded-lg">
+                                    <img class="w-12 h-12" src="/images/calender02.png" />
+                                    <div class="font-light text-xs">กิจกรรม</div>
+                                </div>
+                            </li>
+
+                            <li class="bg-white cursor-pointer p-0.5 h-[100px] w-[75px] rounded-lg bg-gradient-to-b from-[#a06ce1] to-[#19171b] hover:from-[#7a3abf] hover:to-[#fabc0e]">
+                                <div class="flex-col flex h-full items-center justify-center bg-gradient-to-b bg-yellow-600 from-[#363636] to-[#141414] hover:from-[#532294] hover:to-[#361962] tranfroms transition duration-300 ease-in-out rounded-lg">
+                                    <img class="w-12 h-12" src="/images/line.png" />
+                                    <div class="font-light text-xs">Line</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

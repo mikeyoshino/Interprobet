@@ -1,0 +1,68 @@
+﻿@namespace Interprobet.Components
+<div class="mb-10 lg:block md:hidden hidden">
+    <MudCarousel Class="mud-width-full" Style="height:180px;" ShowArrows="true" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="@true" TData="object">
+        <MudCarouselItem Transition="@Transition.Slide" Color="@Color.Primary">
+            <div class="flex" style="height:100%">
+                <div class="w-4/12 px-2 h-full">
+                    <img class="w-full h-full object-cover object-cover" src="/images/slide1.jpg" />
+                </div>
+                <div class="w-4/12 px-2 h-full">
+                    <img class="w-full h-full object-cover object-cover" src="/images/slide2.jpg" />
+                </div>
+                <div class="w-4/12 px-2 h-full">
+                    <img class="w-full h-full object-cover object-cover" src="/images/slide3.jpg" />
+                </div>
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="@Transition.Slide" Color="@Color.Secondary">
+            <div class="flex" style="height:100%">
+                <div class="w-4/12 px-2 h-full">
+                    <img class="w-full h-full object-cover object-cover" src="/images/slide1.jpg" />
+                </div>
+                <div class="w-4/12 px-2 h-full">
+                    <img class="w-full h-full object-cover object-cover" src="/images/slide2.jpg" />
+                </div>
+                <div class="w-4/12 px-2 h-full">
+                    <img class="w-full h-full object-cover object-cover" src="/images/slide3.jpg" />
+                </div>
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="@Transition.Slide">
+            <div class="flex" style="height:100%">
+                <div class="w-4/12 px-2 h-full">
+                    <img class="w-full h-full object-cover object-cover" src="/images/slide1.jpg" />
+                </div>
+                <div class="w-4/12 px-2 h-full">
+                    <img class="w-full h-full object-cover object-cover" src="/images/slide2.jpg" />
+                </div>
+                <div class="w-4/12 px-2 h-full">
+                    <img class="w-full h-full object-cover object-cover" src="/images/slide3.jpg" />
+                </div>
+            </div>
+        </MudCarouselItem>
+    </MudCarousel>
+</div>
+<div class="lg:hidden md:block block">
+    <MudCarousel Class="mud-width-full" Style="height:200px;" ShowArrows="@true" ShowBullets="@false" EnableSwipeGesture="@false" AutoCycle="@true" TData="object">
+        <MudCarouselItem Transition="Transition.Slide" Color="@Color.Primary">
+            <div style="height:100%">
+                <img class="w-full h-full object-cover " src="/images/slide1.jpg" />
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="Transition.Slide" Color="@Color.Secondary">
+            <div style="height:100%">
+                <img class="w-full h-full object-cover" src="/images/slide2.jpg" />
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="Transition.Slide">
+            <div  style="height:100%">
+                <img class="w-full h-full object-cover" src="/images/slide3.jpg" />
+            </div>
+        </MudCarouselItem>
+       
+    </MudCarousel>
+</div>
+
+
+
+

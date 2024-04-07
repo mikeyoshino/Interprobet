@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;800;900&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    position: relative;
+    color: white;
+    overflow-x: hidden;
+    height: 100% !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+html {
+    margin: 0 !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#scroll-container {
+    overflow: hidden;
+}
+
+#scroll-text {
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+}
+/* for Firefox */
+@-moz-keyframes my-animation {
+    from {
+        -moz-transform: translateX(100%);
+    }
+
+    to {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+    from {
+        -webkit-transform: translateX(100%);
+    }
+
+    to {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes my-animation {
+    from {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    to {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+#flashit {
+    -webkit-animation: flasha ease-out 7s infinite;
+    -moz-animation: flasha ease-out 7s infinite;
+    animation: flasha ease-out 7s infinite;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes flasha {
+    from {
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    93% {
+        opacity: 0.6;
+    }
+
+    94% {
+        opacity: 0.2;
+    }
+
+    96% {
+        opacity: 0.9;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes flasha {
+    from {
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    93% {
+        opacity: 0.6;
+    }
+
+    94% {
+        opacity: 0.2;
+    }
+
+    96% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
