@@ -1,9 +1,13 @@
 ﻿@inherits LayoutComponentBase
 @namespace Interprobet.Layout
 
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+
 
 <div class="relative z-40 sticky top-0 ">
-    <div class="absolute w-full lg:h-20 md:h-16 h-[70px] bg-gradient-to-b from-[#5b2b98] to-[#291350] shadow-[0px_1px_25px_4px_rgba(0,0,0,0.75)]"></div>
+    <div class="absolute w-full lg:h-20 md:h-[100px] h-[70px] bg-gradient-to-b from-[#5b2b98] to-[#291350] shadow-[0px_1px_25px_4px_rgba(0,0,0,0.75)]"></div>
     <div class="flex absolute w-full -mt-1">
         <div class="lg:w-6/12 w-7/12 lg:block flex">
             <div class="relative pl-4 w-full">
@@ -87,7 +91,7 @@
                     <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z"></path>
                 </svg>
             </div>
-            <div id="scroll-container" class="w-full grow"><div id="scroll-text">INTERPROBET คาสิโนออนไลน์ สล็อตออนไลน์ ที่ให้คุณสนุกได้ทุกรูปแบบ</div></div>
+            <div id="scroll-container" class="w-full grow truncate"><div id="scroll-text">INTERPROBET คาสิโนออนไลน์ สล็อตออนไลน์ ที่ให้คุณสนุกได้ทุกรูปแบบ</div></div>
         </div>
         <div class="w-full mt-4">
             <HeaderSwiper />
@@ -181,8 +185,8 @@
             </div>
             <div id="appbar-content">
                 <Animation Effect="@Effect.Tada" Speed="@SlowSpeed" Delay="@Delay.None" IterationCount="-1">
-                    <div class="w-[70px] h-[70px]">
-                        <img class="w-20 h-20 -mt-5" src="/images/menu.png" />
+                    <div class="w-full">
+                        <img class="w-full -mt-5" src="/images/menu.png" />
                         <div class="text-center text-sm text-gray-400">กิจกรรม</div>
                     </div>
                 </Animation>
