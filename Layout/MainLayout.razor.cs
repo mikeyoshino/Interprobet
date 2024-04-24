@@ -7,6 +7,7 @@ namespace Interprobet.Layout
         [Inject] private NavigationManager NavigationManager { get; set; }
         public string PromotionPage = "/promotion";
         public string LinePage = "https://store.line.me/officialaccount/th";
+        public TimeSpan SlowSpeed = TimeSpan.FromSeconds(10.0);
         public bool isMenuShow { get; set; }
 
         void LoggleMenu()
